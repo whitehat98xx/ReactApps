@@ -7,7 +7,7 @@ class Penel extends Component{
         return(
             <div className="Panel">
                 <h4 className="h4">{this.props.title}</h4>
-                <div className="content">{this.props.children}</div>
+                <div className="Panel-content">{this.props.children}</div>
             </div>
         )
     };
