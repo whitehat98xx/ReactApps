@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';//das wir react auf anwendungen verschiedener art laufen könnne ios apps android etc
+import ReactDOM from 'react-dom';//für das wir unser virtual dom erstellen
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

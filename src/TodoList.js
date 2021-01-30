@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import Panel from "./Panel"
-
+import PropTypes from "prop-types";
 class TodoList extends Component{
     render(){
 
@@ -19,5 +19,8 @@ class TodoList extends Component{
 
         );
     }
+}
+TodoList.propTypes= {
+
 }
 export default TodoList;

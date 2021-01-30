@@ -22,9 +22,13 @@ class TodoAdd extends Component{
         })
     }
     render(){
+        let buttonStyles={
+            backgroundColor:(this.state.newTodo.length<3 ? "yellow": "green")
+        }
         let button = null;
-        if(this.state.newTodo != ""){
-           button = <button onClick={this.onTodoAdd}>ADD TODO
+        if(this.state.newTodo !== ""){
+           button = <button onClick={this.onTodoAdd}
+           style={buttonStyles}>ADD TODO
             </button>
         }
         return(
