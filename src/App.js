@@ -12,14 +12,13 @@ class App extends Component{
     super(props);
   this.state={
     todos:[
-      {id:1, title:"Obst kaufen"},
-      {id:2,title:"Programmieren lernen"},
-      {id:3,title:"Sport machen"}
+      
     ]
   }
   //this.changeName= this.changeName.bind(this);
   //this.counter= this.counter.bind(this);
   this.addTodo = this.addTodo.bind(this);
+  this.deleteTodo = this.deleteTodo.bind(this);
 }
 /*changeName(){
   this.setState({
@@ -35,6 +34,12 @@ counter(){
     count: c
   })
 }*/
+deleteTodo(ntodo){
+  
+  this.setState({
+    todos: ntodo
+  })
+}
 addTodo(title){
   let d = this.state.todos;
   let maxId = 0;//id im state wichtig da sont react nach jeder änderung alles löscht und wieder anlegt
@@ -55,8 +60,8 @@ addTodo(title){
     <div className="App">
       
       <h1>Enzo's Todo List</h1>
-      <TodoList todos={this.state.todos}/>
-
+      <TodoList newList={this.deleteTodo}todos={this.state.todos}/>
+    
       
       <TodoAdd onAdd={this.addTodo}/>
     </div>
